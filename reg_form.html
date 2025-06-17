@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <style>
+    .field {
+      background-color: rgb(228, 224, 202);
+      padding: 20px;
+    }
+
+    fieldset {
+      background-color: rgb(226, 183, 166);
+      margin-bottom: 20px;
+      padding: 15px;
+
+    }
+    legend{
+        text-decoration: solid;
+        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    h3{
+        font-style:normal;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+   button{
+    border: 3px solid rgb(165, 111, 111);
+    border-radius: 3px;
+    padding:10px;
+    margin:12px;
+   }
+   button:hover{
+       background-color: rgb(185, 130, 130);
+   }
+
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+
+  <form action="index.html" method="post" target="_blank" enctype="multipart/form-data">
+    <fieldset class="field">
+      <h3>Personal Details</h3>
+      
+      <fieldset>
+        <legend>Login Information</legend>
+        <label><strong>Name     :</strong>
+        
+          <input type="text" name="username" placeholder="Enter your name" size="40" maxlength="15" required>
+        </label><br><br>
+
+        <label><strong>Password:</strong>
+          <input type="password" name="password" placeholder="Enter your password" size="40" value="abcd" maxlength="15" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose your interests</legend>
+        <label><strong>Hobbies:</strong></label><br>
+        <input type="checkbox" value="Dance" name="option1"> Dance
+        <input type="checkbox" value="Singing" name="option2"> Singing
+        <input type="checkbox" value="Sports" name="option3" checked> Sports
+        <input type="checkbox" value="Cooking" name="option4"> Cooking
+        <input type="checkbox" value="Reading" name="option5"> Reading
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose your gender</legend>
+        <label><strong>Gender:</strong></label><br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose Items</legend>
+        <label for="drop1"><strong>Items:</strong></label><br>
+        <select name="drop1" id="drop1" size="4" multiple>
+          <option value="0">All</option>
+          <option value="1">Shoes</option>
+          <option value="2">T-shirts</option>
+          <option value="3">Accessories</option>
+          <option value="4">Jackets</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Country</legend>
+        <label for="countryList"><strong>Country:</strong></label>
+        <select name="countryList" id="countryList" autofocus>
+          <option value="np">Nepal</option>
+          <option value="in">India</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="au">Australia</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Comments</legend>
+        <label><strong>Comment:</strong></label><br>
+        <textarea rows="7" cols="60" name="comment" placeholder="Enter your comment here"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>File Upload</legend>
+        <label>Choose a file:</label><br>
+        <input type="file" name="upload" accept=".txt, .pdf, .docx">
+        <input type="submit" value="Upload File">
+      </fieldset>
+
+      <div style="text-align: center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+
+    </fieldset>
+  </form>
+</body>
+</html>
